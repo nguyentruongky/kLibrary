@@ -27,6 +27,10 @@
 		26657A4D1D6EFEE100538C02 /* FlatSpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26657A4C1D6EFEE100538C02 /* FlatSpinnerView.swift */; };
 		26657A4F1D6F02EB00538C02 /* KTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26657A4E1D6F02EB00538C02 /* KTextField.swift */; };
 		2688E7AB1C5F35D6007DD00A /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2688E7AA1C5F35D6007DD00A /* DatePickerDialog.swift */; };
+		26B72D191D706A8D0009DA07 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B72D181D706A8D0009DA07 /* UIImage.swift */; };
+		26B72D1B1D70E9ED0009DA07 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B72D1A1D70E9ED0009DA07 /* UIViewController.swift */; };
+		26B72D1D1D70EABE0009DA07 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B72D1C1D70EABE0009DA07 /* UITextField.swift */; };
+		26B72D1F1D70EB420009DA07 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B72D1E1D70EB420009DA07 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,10 @@
 		26657A4C1D6EFEE100538C02 /* FlatSpinnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatSpinnerView.swift; sourceTree = "<group>"; };
 		26657A4E1D6F02EB00538C02 /* KTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTextField.swift; sourceTree = "<group>"; };
 		2688E7AA1C5F35D6007DD00A /* DatePickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
+		26B72D181D706A8D0009DA07 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		26B72D1A1D70E9ED0009DA07 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		26B72D1C1D70EABE0009DA07 /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		26B72D1E1D70EB420009DA07 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +119,10 @@
 				26657A4C1D6EFEE100538C02 /* FlatSpinnerView.swift */,
 				260A794C1C572A3300EFC5F1 /* NSDateExtension.swift */,
 				260A79501C572B2200EFC5F1 /* UIExtension.swift */,
+				26B72D1C1D70EABE0009DA07 /* UITextField.swift */,
+				26B72D1E1D70EB420009DA07 /* UIView.swift */,
+				26B72D181D706A8D0009DA07 /* UIImage.swift */,
+				26B72D1A1D70E9ED0009DA07 /* UIViewController.swift */,
 			);
 			name = extension;
 			sourceTree = "<group>";
@@ -214,6 +226,8 @@
 			files = (
 				26657A4B1D6EFD8A00538C02 /* KButton.swift in Sources */,
 				260A79611C575A5100EFC5F1 /* KPageViewController.swift in Sources */,
+				26B72D1F1D70EB420009DA07 /* UIView.swift in Sources */,
+				26B72D1D1D70EABE0009DA07 /* UITextField.swift in Sources */,
 				260A796C1C57614F00EFC5F1 /* KMPlaceholderTextView.swift in Sources */,
 				260A79631C575A5100EFC5F1 /* MainViewController.swift in Sources */,
 				260A79681C575F8100EFC5F1 /* BarButtonNumber.swift in Sources */,
@@ -226,8 +240,10 @@
 				260A795A1C5731AB00EFC5F1 /* ImageSlideShowIntention.swift in Sources */,
 				260A79161C562FBF00EFC5F1 /* AppDelegate.swift in Sources */,
 				260A79691C575F8100EFC5F1 /* AnimationScrollView.swift in Sources */,
+				26B72D1B1D70E9ED0009DA07 /* UIViewController.swift in Sources */,
 				260A79581C57316200EFC5F1 /* ExpandTextField.swift in Sources */,
 				260A792A1C562FE600EFC5F1 /* StringExtension.swift in Sources */,
+				26B72D191D706A8D0009DA07 /* UIImage.swift in Sources */,
 				26657A4D1D6EFEE100538C02 /* FlatSpinnerView.swift in Sources */,
 				26657A4F1D6F02EB00538C02 /* KTextField.swift in Sources */,
 			);

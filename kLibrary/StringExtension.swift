@@ -9,11 +9,44 @@
 import UIKit
 
 extension NSAttributedString{
+    
     func attributeString(atrString: String, mainStr: String, color: UIColor, font: UIFont){
         let mutableAtrStr = NSMutableAttributedString(string: mainStr)
         let attribute = [NSForegroundColorAttributeName: color, NSFontAttributeName: font]
         let attributeString = NSAttributedString(string: atrString, attributes: attribute)
         mutableAtrStr.appendAttributedString(attributeString)
+    }
+    
+    /**
+     format some string in normal string.
+     */
+    func formatStringInString(string: String,
+                              font: UIFont = UIFont.systemFontOfSize(14),
+                              color: UIColor = UIColor.blackColor(),
+                              boldStrings: [String],
+                              boldFont: UIFont = UIFont.boldSystemFontOfSize(14),
+                              boldColor: UIColor = UIColor.blueColor()
+        ) -> NSAttributedString {
+        
+        let attributedString =
+            NSMutableAttributedString(string: string,
+                                      attributes: [
+                                        NSFontAttributeName: font,
+                                        NSForegroundColorAttributeName: color])
+        let boldFontAttribute = [NSFontAttributeName: boldFont, NSForegroundColorAttributeName: boldColor]
+        for bold in boldStrings {
+            attributedString.addAttributes(boldFontAttribute, range: (string as NSString).rangeOfString(bold))
+        }
+        return attributedString
+    }
+
+    func formatParagraph(string: String, alignText: NSTextAlignment = NSTextAlignment.Left, spacing: CGFloat = 7) -> NSAttributedString {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = spacing
+        paragraphStyle.alignment = alignText
+        paragraphStyle.maximumLineHeight = 40
+        let attributed = [NSParagraphStyleAttributeName:paragraphStyle]
+        return NSAttributedString(string: string, attributes:attributed)
     }
 }
 
@@ -150,10 +183,13 @@ public extension String {
     
     func indexOf(substring: String) -> Int? {
         
-        if let range = rangeOfString(substring) {
-            return startIndex.distanceTo(range.startIndex)
-        }
-        return nil
+        guard let range = rangeOfString(substring) else { return nil }
+        return startIndex.distanceTo(range.startIndex)
+    }
+    
+    func lastIndexOf(target: String) -> Int? {
+        guard let range = rangeOfString(target, options: .BackwardsSearch) else { return nil }
+        return startIndex.distanceTo(range.startIndex)
     }
     
     func initials() -> String {

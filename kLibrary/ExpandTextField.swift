@@ -8,14 +8,9 @@
 
 import UIKit
 
-@IBDesignable class ExpandTextField: UITextField {
-
-    // MARK: Next item
+class ExpandTextField: UITextField {
     
     var nextFriend : UITextField?
     
-    func next() {
-        
-        nextFriend?.becomeFirstResponder()
-    }
+    func next() { nextFriend?.becomeFirstResponder() }
 }

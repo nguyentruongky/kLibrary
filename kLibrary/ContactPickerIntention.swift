@@ -61,7 +61,7 @@ class ContactPickerIntention: NSObject, UISearchBarDelegate, UITableViewDelegate
             
             let allContacts = ABAddressBookCopyArrayOfAllPeople(addressBook).takeRetainedValue() as Array
 
-            for var i = 0; i < allContacts.count; i++ {
+            for i in 0 ..< allContacts.count {
                 
                 let currentContact: ABRecordRef = allContacts[i]
                 let currentName = self.getNameFromContact(currentContact)
@@ -158,9 +158,8 @@ class ContactPickerIntention: NSObject, UISearchBarDelegate, UITableViewDelegate
         
         var phoneNumberList = [String]()
         let phones:ABMultiValueRef = ABRecordCopyValue(currentContact, kABPersonPhoneProperty).takeRetainedValue()
-        
-        for var j: CFIndex = 0; j < ABMultiValueGetCount(phones); j++ {
-            
+        let count = ABMultiValueGetCount(phones)
+        for j in 0 ..< count {
             let mobileLabel = ABMultiValueCopyLabelAtIndex(phones, j).takeRetainedValue()
             
             if mobileLabel == kABPersonPhoneMobileLabel ||
